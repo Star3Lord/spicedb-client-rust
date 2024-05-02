@@ -25,6 +25,12 @@ This will use the `buf` CLI to pull the latest protobuf definitions as well as a
 the `proto` directory. It will then run a cargo build, generating the needed Rust code which you can
 include using [`tonic::include_proto`](https://docs.rs/tonic/latest/tonic/macro.include_proto.html).
 
+IF you just want fetch the latest protobuf definitions, run
+
+```
+docker run --volume "$(pwd):/workspace" --workdir /workspace bufbuild/buf export buf.build/authzed/api --output ./proto
+```
+
 ### Including in the crate
 
 If you are building because a new version of the SpiceDB API is released, you can use
