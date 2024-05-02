@@ -15,7 +15,7 @@ args = [ "-p", "proto" ]
 command = "buf"
 args = [ "export", "buf.build/authzed/api", "--output", "./proto" ]
 
-[tasks.buld]
+[tasks.build]
 dependencies = [
     "check-buf-installed",
     "ensure-proto-dir",
